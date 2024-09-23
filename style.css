@@ -1,0 +1,80 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 30px;
+    background-color: aliceblue;
+}
+#drum-machine {
+    border: 4px solid orange;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    gap: 30px;
+    margin: 10px;
+}
+#triggers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.drum-pad {
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    padding: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    border: none;
+}
+.drum-pad, input, button {
+    cursor: pointer;
+}
+.drum-pad:active, #mute:active {
+    background-color: orange;
+}
+label {
+    text-align: center;
+    font-size: 1.5rem;
+}
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+#mute {
+    background-color: beige;
+    border: 2px solid gray;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+#display {
+    width: 176px;
+    height: 30px;
+    background-color: azure;
+    border: 2px solid gray;
+    color: orange;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px 10px;
+}
+.active {
+    background-color: orange;
+}
+@media (max-width: 350px) {
+    #drum-machine {
+        padding: 15px;
+    }
+}
